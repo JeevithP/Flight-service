@@ -39,24 +39,4 @@ If you're setting up test or prod environment, make sure you also replace the ho
 
 To run the server execute
 
-npm run dev
-About
-No description, website, or topics provided.
-Resources
- Readme
- Activity
-Stars
- 29 stars
-Watchers
- 1 watching
-Forks
- 9 forks
-Report repository
-Releases
-No releases published
-Packages
-No packages published
-Languages
-JavaScript
-100.0%
-Footer
+node index.js
