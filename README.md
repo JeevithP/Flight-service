@@ -40,3 +40,66 @@ If you're setting up test or prod environment, make sure you also replace the ho
 To run the server execute
 
 node index.js
+
+🚀 Description
+Flight-Service manages all flight-related core data:
+
+City, Airport, Airplane, Flight, Seat
+Implements robust repository-service-controller patterns with Type-safe validation and structured logging.
+
+🌐 Tech Stack
+Node.js + Express
+
+Sequelize ORM + MySQL
+
+Winston for logging
+
+RabbitMQ for inter-service messaging
+
+🔧 Setup Instructions
+bash
+Copy
+Edit
+git clone https://github.com/JeevithP/Flight-service
+cd Flight-service
+npm install
+Create .env with:
+
+ini
+Copy
+Edit
+PORT=3000
+DB_USERNAME=...
+DB_PASSWORD=...
+DB_NAME=...
+DB_HOST=...
+Run migrations:
+
+bash
+Copy
+Edit
+npx sequelize db:migrate
+Start server:
+
+bash
+Copy
+Edit
+npm run dev
+📦 API Endpoints
+City
+
+GET /api/v1/cities
+
+POST /api/v1/cities
+
+PATCH /api/v1/cities/:id
+
+Airport, Airplane, Flight
+
+CRUD endpoints with /api/v1/airports, .../airplanes, /api/v1/flights
+
+Complex filtering for flights with parameters like trips, price, travellers, tripDate, and sort
+
+Seat Management
+
+PATCH /api/v1/flights/:id/seats to increment/decrement seat count
